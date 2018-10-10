@@ -50,11 +50,11 @@ app.post('/', (req, res)=>{
 //PUT name from book
 app.put('/:id', (req, res)=>{
     id = parseInt(req.params.id)
-    nameNew = req.body.name
+    authorNew = req.body.author
     
     for (var i = 0; i < book.length; i++){        
         if (book[i].id === id ){
-            book[i].author = nameNew            
+            book[i].author = authorNew            
         }        
     }
     res.send(book)
